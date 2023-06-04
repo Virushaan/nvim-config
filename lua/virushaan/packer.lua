@@ -4,6 +4,7 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
+  use '~/Code/hobby/nvim_jira'
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
@@ -30,10 +31,14 @@ return require('packer').startup(function(use)
 
   use("preservim/nerdtree")
 
+  use("chentoast/marks.nvim")
+
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+
+  use('simrat39/rust-tools.nvim')
 
   use {
   'VonHeikemen/lsp-zero.nvim',
@@ -65,5 +70,7 @@ return require('packer').startup(function(use)
     run = 'yarn install --frozen-lockfile --production',
   }
 
-
+  use 'nvim-tree/nvim-web-devicons'
+  use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 end)
+

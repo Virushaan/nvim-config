@@ -1,10 +1,14 @@
 local lsp = require("lsp-zero")
 
+require('rust-tools').setup({})
 lsp.preset("recommended")
 
 lsp.ensure_installed({
   'tsserver',
+  'eslint',
   'rust_analyzer',
+  'gopls',
+  'golangci_lint_ls',
 })
 
 -- Fix Undefined global 'vim'
@@ -64,14 +68,14 @@ local function filter(arr, fn)
   return filtered
 end
 
-local function filterReactDTS(value)
+local function filterNodeModules(value)
   return value.filename.startswith("node_modules") == nil
 end
 
 local function on_list(options)
   local items = options.items
   if #items > 1 then
-    items = filter(items, filterReactDTS)
+    items = filter(items,filterNodeModules )
   end
 
   vim.fn.setqflist({}, ' ', { title = options.title, items = items, context = options.context })
@@ -88,6 +92,7 @@ lsp.on_attach(function(client, bufnr)
 
   vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
   vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
+  vim.keymap.set("n", "<leader>fmt", function() vim.lsp.buf.format({async = true}) end, opts)
   vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
   vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
   vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)

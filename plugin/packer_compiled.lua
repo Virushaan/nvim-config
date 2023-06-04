@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/virushaan/.local/share/nvim/site/pack/packer/start/auto-pairs",
     url = "https://github.com/jiangmiao/auto-pairs"
   },
+  ["barbar.nvim"] = {
+    loaded = true,
+    path = "/Users/virushaan/.local/share/nvim/site/pack/packer/start/barbar.nvim",
+    url = "https://github.com/romgrk/barbar.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/virushaan/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -134,6 +139,11 @@ _G.packer_plugins = {
     path = "/Users/virushaan/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["marks.nvim"] = {
+    loaded = true,
+    path = "/Users/virushaan/.local/share/nvim/site/pack/packer/start/marks.nvim",
+    url = "https://github.com/chentoast/marks.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/Users/virushaan/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -165,10 +175,14 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/Users/virushaan/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    loaded = true,
+    path = "/Users/virushaan/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  nvim_jira = {
+    loaded = true,
+    path = "/Users/virushaan/.local/share/nvim/site/pack/packer/start/nvim_jira",
+    url = "/Users/virushaan/Code/hobby/nvim_jira"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -189,6 +203,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/virushaan/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
+  },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/Users/virushaan/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

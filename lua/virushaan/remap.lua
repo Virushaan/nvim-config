@@ -49,3 +49,14 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
+-- Move to previous/next
+vim.keymap.set('n', '<C-,>', '<Cmd>BufferPrevious<CR>', opts)
+vim.keymap.set('n', '<C-.>', '<Cmd>BufferNext<CR>', opts)
+vim.keymap.set('n', '<C-1>', '<Cmd>BufferGoto 1<CR>', opts)
+vim.keymap.set('n', '<C-2>', '<Cmd>BufferGoto 2<CR>', opts)
+vim.keymap.set('n', '<C-3>', '<Cmd>BufferGoto 3<CR>', opts)
+vim.keymap.set('n', '<C-4>', '<Cmd>BufferGoto 4<CR>', opts)
+vim.keymap.set('n', '<C-5>', '<Cmd>BufferGoto 5<CR>', opts)
+vim.keymap.set('n', '<C-9>', '<Cmd>BufferLast<CR>', opts)
+
+vim.keymap.set('n', '<C-9>', '<Cmd>BufferLast<CR>', opts)
